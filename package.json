@@ -2,7 +2,7 @@
   "name": "js-constructor-study-youtube",
   "version": "1.0.0",
   "description": "javascript pure aplication",
-  "main": "index.js",
+  "main": "./src/index.html",
   "scripts": {
     "serve": "parcel ./src/index.html -p 4200 --open"
   },

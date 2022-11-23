@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"lX4BT":[function(require,module,exports) {
+})({"ShInH":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
+module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -531,8 +531,119 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"4M6V8":[function(require,module,exports) {
+},{}],"8lqZg":[function(require,module,exports) {
+var _model = require("./model");
+var _templates = require("./templates");
+var _mainCss = require("./styles/main.css");
+const $site = document.querySelector("#site");
+(0, _model.model).forEach((block)=>{
+    let html = "";
+    if (block.type === "title") html = (0, _templates.title)(block);
+    else if (block.type === "text") html = (0, _templates.text)(block);
+    else if (block.type === "columns") html = (0, _templates.columns)(block);
+    else if (block.type === "image") html = (0, _templates.image)(block);
+    $site.insertAdjacentHTML("beforeend", html);
+});
 
-},{}]},["lX4BT","4M6V8"], "4M6V8", "parcelRequiref8f7")
+},{"./model":"dEDha","./templates":"gOO7a","./styles/main.css":"clPKd"}],"dEDha":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "model", ()=>model);
+const model = [
+    {
+        type: "title",
+        value: "Hello World from JS!!!"
+    },
+    {
+        type: "text",
+        value: "here we go with some text"
+    },
+    {
+        type: "columns",
+        value: [
+            "1111111",
+            "2222222",
+            "3333333"
+        ]
+    },
+    {
+        type: "image",
+        value: "./assets/image.png"
+    }
+];
 
-//# sourceMappingURL=js-constructor-study-youtube.59712999.js.map
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"gOO7a":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "title", ()=>title);
+parcelHelpers.export(exports, "text", ()=>text);
+parcelHelpers.export(exports, "columns", ()=>columns);
+parcelHelpers.export(exports, "image", ()=>image);
+function title(block) {
+    return `
+    <div class="row">
+        <div class="col-cm">
+            <h1>${block.value}</h1>
+        </div>
+    </div>
+    `;
+}
+function text(block) {
+    return `
+    <div class="row">
+        <div class="col-cm">
+            <p>${block.value}</p>
+        </div>
+    </div>
+    `;
+}
+function columns(block) {
+    const html = block.value.map((item)=>`<div class="col-cm">${item}</div>`);
+    return `
+    <div class="row">
+        ${html.join("")}
+    </div>
+
+    `;
+}
+function image(block) {
+    return `
+        <div class="row">
+            <img src="${block.value}"
+        </div>
+    `;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"clPKd":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
+
+//# sourceMappingURL=index.975ef6c8.js.map
