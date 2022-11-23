@@ -2,9 +2,10 @@
   "name": "js-constructor-study-youtube",
   "version": "1.0.0",
   "description": "javascript pure aplication",
-  "main": "index.js",
+  "source": "src/index.js",
   "scripts": {
-    "serve": "parcel ./src/index.html -p 3000 --open"
+    "serve": "parcel ./src/index.html -p 3000 --open",
+    "build": "parcel build ./src/index.html --no-source-maps"
   },
   "repository": {
     "type": "git",
