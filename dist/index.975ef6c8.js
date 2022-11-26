@@ -545,10 +545,15 @@ const $site = document.querySelector("#site");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "model", ()=>model);
+var _imagePng = require("./assets/image.png");
+var _imagePngDefault = parcelHelpers.interopDefault(_imagePng);
 const model = [
     {
         type: "title",
-        value: "Hello World from JS"
+        value: "Hello World from JS",
+        options: {
+            tag: "h2"
+        }
     },
     {
         type: "text",
@@ -564,11 +569,11 @@ const model = [
     },
     {
         type: "image",
-        value: "./assets/image.png"
+        value: (0, _imagePngDefault.default)
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./assets/image.png":"ljha9"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -598,43 +603,61 @@ exports.export = function(dest, destName, get) {
     });
 };
 
+},{}],"ljha9":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "image.513edb25.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"gOO7a":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "templates", ()=>templates);
+var _utils = require("./utils");
 function title(block) {
-    return `
-    <div class="row">
-        <div class="col-cm">
-            <h1>${block.value}</h1>
-        </div>
-    </div>
-    `;
+    const tag = block.options.tag ?? "h1";
+    return (0, _utils.row)((0, _utils.col)(`<${tag}>${block.value}</${tag}>`));
 }
 function text(block) {
-    return `
-    <div class="row">
-        <div class="col-cm">
-            <p>${block.value}</p>
-        </div>
-    </div>
-    `;
+    return (0, _utils.row)((0, _utils.col)(`<p>${block.value}</p>`));
 }
 function columns(block) {
-    const html = block.value.map((item)=>`<div class="col-cm">${item}</div>`);
-    return `
-    <div class="row">
-        ${html.join("")}
-    </div>
-
-    `;
+    const html = block.value.map((0, _utils.col)).join("");
+    return (0, _utils.row)(html);
 }
 function image(block) {
-    return `
-        <div class="row">
-            <img src="${block.value}"
-        </div>
-    `;
+    return (0, _utils.row)(`<img src="${block.value}" />`);
 }
 const templates = {
     title,
@@ -642,6 +665,18 @@ const templates = {
     image,
     columns
 };
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"en4he"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "row", ()=>row);
+parcelHelpers.export(exports, "col", ()=>col);
+function row(content) {
+    return `<div class="row">${content}</div>`;
+}
+function col(content) {
+    return `<div class="col-sm">${content}</div>`;
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"clPKd":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
 
