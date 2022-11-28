@@ -533,113 +533,65 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"8lqZg":[function(require,module,exports) {
 var _model = require("./model");
-var _templates = require("./templates");
+var _site = require("./classes/site");
 var _mainCss = require("./styles/main.css");
-const $site = document.querySelector("#site");
-(0, _model.model).forEach((block)=>{
-    const toHTML = (0, _templates.templates)[block.type];
-    if (toHTML) $site.insertAdjacentHTML("beforeend", toHTML(block));
-});
+const site = new (0, _site.Site)("#site");
+site.render((0, _model.model));
 
-},{"./model":"dEDha","./templates":"gOO7a","./styles/main.css":"clPKd"}],"dEDha":[function(require,module,exports) {
+},{"./styles/main.css":"clPKd","./model":"dEDha","./classes/site":"24VTm"}],"clPKd":[function() {},{}],"dEDha":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "model", ()=>model);
 var _imagePng = require("./assets/image.png");
 var _imagePngDefault = parcelHelpers.interopDefault(_imagePng);
+var _blocks = require("./classes/blocks");
 const text = `
  Крутые видео и уроки по JavaScript тут: <a href="https://youtube.com/c/VladilenMinin" target="_blank">Владилен Минин</a>. Тут ты найдешь исчерпывающую информацию по любым аспектам языка, любым фреймворкам, такие как: React, Vue, Angular, Node, Svelte, Express, Next, Nuxt и многое другое. Присоединяйся!
  `;
 const model = [
-    {
-        type: "title",
-        value: "Конструктор сайтов на чистому JavaScript",
-        options: {
-            tag: "h2",
-            styles: {
-                background: "linear-gradient(to right, #ff0099, #493240)",
-                color: "#fff",
-                padding: "1.5rem",
-                "text-align": "center"
-            }
+    new (0, _blocks.TitleBlock)("Конструктор сайтов на чистому JavaScript", {
+        tag: "h2",
+        styles: {
+            background: "linear-gradient(to right, #ff0099, #493240)",
+            color: "#fff",
+            padding: "1.5rem",
+            "text-align": "center"
         }
-    },
-    {
-        type: "image",
-        value: (0, _imagePngDefault.default),
-        options: {
-            styles: {
-                padding: "2rem 0",
-                displey: "flex",
-                "justify-content": "center"
-            },
-            imageStyles: {
-                width: "500px",
-                height: "auto"
-            },
-            alt: "this picture"
+    }),
+    new (0, _blocks.ImageBlock)((0, _imagePngDefault.default), {
+        styles: {
+            padding: "2rem 0",
+            displey: "flex",
+            "justify-content": "center"
+        },
+        imageStyles: {
+            width: "500px",
+            height: "auto"
+        },
+        alt: "this picture"
+    }),
+    new (0, _blocks.ColumnsBlock)([
+        "Приложение на чистом JavaScript, без использования библиотек",
+        "Узнаешь как работают принципы SOLID и ООП в JavaScript за один курс",
+        "JavaScript - это просто, интересно. Научись создавать любые UI своими руками"
+    ], {
+        styles: {
+            background: "linear-gradient(to bottom, #8e2de2, #4a00e0)",
+            padding: "2rem",
+            color: "#fff",
+            "font-weight": "bold"
         }
-    },
-    {
-        type: "columns",
-        value: [
-            "Приложение на чистом JavaScript, без использования библиотек",
-            "Узнаешь как работают принципы SOLID и ООП в JavaScript за один курс",
-            "JavaScript - это просто, интересно. Научись создавать любые UI своими руками"
-        ],
-        options: {
-            styles: {
-                background: "linear-gradient(to bottom, #8e2de2, #4a00e0)",
-                padding: "2rem",
-                color: "#fff",
-                "font-weight": "bold"
-            }
+    }),
+    new (0, _blocks.TextBlock)(text, {
+        styles: {
+            background: "linear-gradient(to left, #f2994a, #f2c94c)",
+            padding: "1rem",
+            "font-weight": "bold"
         }
-    },
-    {
-        type: "text",
-        value: text,
-        options: {
-            styles: {
-                background: "linear-gradient(to left, #f2994a, #f2c94c)",
-                padding: "1rem",
-                "font-weight": "bold"
-            }
-        }
-    }
+    })
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./assets/image.png":"ljha9"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"ljha9":[function(require,module,exports) {
+},{"./assets/image.png":"ljha9","./classes/blocks":"gMfMj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ljha9":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "image.513edb25.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -676,34 +628,60 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"gOO7a":[function(require,module,exports) {
+},{}],"gMfMj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "templates", ()=>templates);
-var _utils = require("./utils");
-function title(block) {
-    const { tag ="h1" , styles  } = block.options;
-    return (0, _utils.row)((0, _utils.col)(`<${tag}>${block.value}</${tag}>`), (0, _utils.css)(styles));
+parcelHelpers.export(exports, "TitleBlock", ()=>TitleBlock);
+parcelHelpers.export(exports, "ImageBlock", ()=>ImageBlock);
+parcelHelpers.export(exports, "ColumnsBlock", ()=>ColumnsBlock);
+parcelHelpers.export(exports, "TextBlock", ()=>TextBlock);
+var _utils = require("../utils");
+class Block {
+    constructor(value, options){
+        this.value = value;
+        this.options = options;
+    }
+    toHTML() {
+        throw new Error("Метод toHTML має бути реалізований");
+    }
 }
-function text(block) {
-    return (0, _utils.row)((0, _utils.col)(`<p>${block.value}</p>`), (0, _utils.css)(block.options.styles));
+class TitleBlock extends Block {
+    constructor(value, options){
+        super(value, options);
+    }
+    toHTML() {
+        const { tag ="h1" , styles  } = this.options;
+        return (0, _utils.row)((0, _utils.col)(`<${tag}>${this.value}</${tag}>`), (0, _utils.css)(styles));
+    }
 }
-function columns(block) {
-    const html = block.value.map((0, _utils.col)).join("");
-    return (0, _utils.row)(html, (0, _utils.css)(block.options.styles));
+class ImageBlock extends Block {
+    constructor(value, options){
+        super(value, options);
+    }
+    toHTML() {
+        const { imageStyles: is , alt ="" , styles  } = this.options;
+        return (0, _utils.row)(`<img src="${this.value}" alt="${alt}" style="${(0, _utils.css)(is)}"/>`, (0, _utils.css)(styles));
+    }
 }
-function image(block) {
-    const { imageStyles: is , alt ="" , styles  } = block.options;
-    return (0, _utils.row)(`<img src="${block.value}" alt="${alt}" style="${(0, _utils.css)(is)}"/>`, (0, _utils.css)(styles));
+class ColumnsBlock extends Block {
+    constructor(value, options){
+        super(value, options);
+    }
+    toHTML() {
+        const html = this.value.map((0, _utils.col)).join("");
+        return (0, _utils.row)(html, (0, _utils.css)(this.options.styles));
+    }
 }
-const templates = {
-    title,
-    text,
-    image,
-    columns
-};
+class TextBlock extends Block {
+    constructor(value, options){
+        super(value, options);
+    }
+    toHTML() {
+        return (0, _utils.row)((0, _utils.col)(`<p>${this.value}</p>`), (0, _utils.css)(this.options.styles));
+    }
+}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"en4he"}],"en4he":[function(require,module,exports) {
+},{"../utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "row", ()=>row);
@@ -720,6 +698,51 @@ function css(styles = {}) {
     return Object.keys(styles).map(toString).join(";");
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"clPKd":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"24VTm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Site", ()=>Site);
+class Site {
+    constructor(selector){
+        this.$el = document.querySelector(selector);
+    }
+    render(model) {
+        model.forEach((block)=>{
+            this.$el.insertAdjacentHTML("beforeend", block.toHTML());
+        });
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
 
 //# sourceMappingURL=index.975ef6c8.js.map

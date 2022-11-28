@@ -1,4 +1,4 @@
-4169
+4171
 107D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\node_modules\node-addon-api\node_api.gyp133136787082166219 0
 114D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\page-transition-events.js133136787350091208 0
 78D:\Навчання\js-constructor-study-youtube\node_modules\clone\.npmignore133136787082322515 0
@@ -35,7 +35,7 @@
 108D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\childnode-remove.js133136787265369402 0
 82D:\Навчання\js-constructor-study-youtube\node_modules\posthtml-render\dist133136787117519672 1
 91D:\Навчання\js-constructor-study-youtube\node_modules\source-map-support\LICENSE.md133136787121122736 0
-53D:\Навчання\js-constructor-study-youtube\dist133140694618076023 1
+53D:\Навчання\js-constructor-study-youtube\dist133140772045364702 1
 87D:\Навчання\js-constructor-study-youtube\node_modules\lines-and-columns\LICENSE133136787078884953 0
 103D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\node_modules\node-addon-api\index.js133136787177465458 0
 96D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\ts41\delimiter-case.d.ts133136787159410076 0
@@ -54,6 +54,11 @@
 72D:\Навчання\js-constructor-study-youtube\node_modules\nullthrows133136787108297628 1
 61D:\Навчання\js-constructor-study-youtube\node_modules133136787394605076 1
 108D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\lib\requests\ValidationRequest.js133136787290307736 0
+60D:\Навчання\js-constructor-study-youtube\src\classes133140765039753891 1
+72D:\Навчання\js-constructor-study-youtube\node_modules\parse-json133136787090945562 1
+93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\FK.js133136787303921117 0
+87D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions133136787363199772 1
+68D:\Навчання\js-constructor-study-youtube\node_modules\base-x133136787093775507 1
 66D:\Навчання\js-constructor-study-youtube\node_modules\csso133136787239457737 1
 74D:\Навчання\js-constructor-study-youtube\node_modules\terser\tools133136787250083724 1
 72D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\fs133136787178783862 1
@@ -64,7 +69,7 @@
 86D:\Навчання\js-constructor-study-youtube\node_modules\css-select\lib\sort.d.ts133136787216425442 0
 87D:\Навчання\js-constructor-study-youtube\node_modules\yaml\browser\parse-cst.js133136787190534379 0
 84D:\Навчання\js-constructor-study-youtube\node_modules\lightningcss\README.md133136787117309605 0
-52D:\Навчання\js-constructor-study-youtube\src133139754260728635 1
+52D:\Навчання\js-constructor-study-youtube\src133140760106395934 1
 149D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-package-redirect-down133136787272037823 1
 87D:\Навчання\js-constructor-study-youtube\node_modules\dotenv-expand\lib\main.js133136787115439196 0
 68D:\Навчання\js-constructor-study-youtube\node_modules\@lezer133136787007689078 1
@@ -87,12 +92,12 @@
 92D:\Навчання\js-constructor-study-youtube\node_modules\@babel\code-frame\lib\index.js133136787089539365 0
 63D:\Навчання\js-constructor-study-youtube\src\index.html133136967374134015 0
 91D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\entries.d.ts133136787162079157 0
-61D:\Навчання\js-constructor-study-youtube\src\index.js133139717452217343 0
+61D:\Навчання\js-constructor-study-youtube\src\index.js133140770463994621 0
 110D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\src\requests\ParcelConfigRequest.js133136787269729359 0
 110D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\css-featurequeries.js133136787287568044 0
 98D:\Навчання\js-constructor-study-youtube\node_modules\@jridgewell\resolve-uri\package.json133136787088103809 0
 61D:\Навчання\js-constructor-study-youtube\src\utils.js133140672290314209 0
-61D:\Навчання\js-constructor-study-youtube\src\model.js133140689716760439 0
+61D:\Навчання\js-constructor-study-youtube\src\model.js133140742106483842 0
 107D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\contenteditable.js133136787271777885 0
 90D:\Навчання\js-constructor-study-youtube\node_modules\@swc\helpers\src\_update.mjs133136787290776505 0
 92D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\node-resolver-core\src133136787250396245 1
@@ -103,15 +108,19 @@
 124D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\test\fixtures\custom-format-mismatch\package.json133136787291870275 0
 136D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\node-resolver-core\test\fixture\packages\source-alias\package.json133136787274597546 0
 103D:\Навчання\js-constructor-study-youtube\node_modules\svgo\plugins\removeUnknownsAndDefaults.js133136787245105448 0
-93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\IR.js133136787317889406 0
-97D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\touch.js133136787358659980 0
-71D:\Навчання\js-constructor-study-youtube\node_modules\js-tokens133136787098573004 1
-118D:\Навчання\js-constructor-study-youtube\node_modules\@babel\highlight\node_modules\color-convert\CHANGELOG.md133136787082979279 0
-90D:\Навчання\js-constructor-study-youtube\node_modules\csso\lib\clean\WhiteSpace.js133136787235354860 0
-73D:\Навчання\js-constructor-study-youtube\node_modules\htmlparser2133136787161610397 1
-65D:\Навчання\js-constructor-study-youtube\src\templates.js133140694610226029 0
-90D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\cache\lib\FSCache.js133136787084041300 0
-103D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\namer-default\lib\DefaultNamer.js133136787084197491 0
+104D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\lib\modules\removeOptionalTags.js133136787199509187 0
+91D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\dependencies\lz4\lib\dll133136787283496057 1
+104D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\offline-apps.js133136787349466227 0
+97D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\tsconfig-json.d.ts133136787218948395 0
+70D:\Навчання\js-constructor-study-youtube\src\classes\blocks.js133140762345326493 0
+121D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_drop.c133136787220471720 0
+97D:\Навчання\js-constructor-study-youtube\node_modules\mdn-data\css\properties.schema.json133136787185780025 0
+71D:\Навчання\js-constructor-study-youtube\node_modules\callsites133136787098462964 1
+103D:\Навчання\js-constructor-study-youtube\node_modules\node-gyp-build-optional-packages\index.js133136787092911952 0
+92D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\utils\src\sourcemap.js133136787254778374 0
+93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\DE.js133136787299796239 0
+86D:\Навчання\js-constructor-study-youtube\node_modules\postcss-value-parser\lib133136787137440829 1
+68D:\Навчання\js-constructor-study-youtube\src\classes\site.js133140772036474686 0
 73D:\Навчання\js-constructor-study-youtube\node_modules\xxhash-wasm133136787150080327 1
 118D:\Навчання\js-constructor-study-youtube\node_modules\abortcontroller-polyfill\src\abortcontroller-polyfill.js133136787098653020 0
 87D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\types\build-ts.js133136787082322515 0
@@ -183,10 +192,6 @@
 68D:\Навчання\js-constructor-study-youtube\node_modules\@types133136787007532784 1
 93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\BR.js133136787255247117 0
 67D:\Навчання\js-constructor-study-youtube\node_modules\acorn133136787149611516 1
-72D:\Навчання\js-constructor-study-youtube\node_modules\parse-json133136787090945562 1
-93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\FK.js133136787303921117 0
-87D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions133136787363199772 1
-68D:\Навчання\js-constructor-study-youtube\node_modules\base-x133136787093775507 1
 96D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\utils\test\input\sourcemap133136787269573117 1
 104D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\require-at-least-one.d.ts133136787209613581 0
 110D:\Навчання\js-constructor-study-youtube\node_modules\@swc\helpers\src\_class_apply_descriptor_set.mjs133136787268454264 0
@@ -209,9 +214,6 @@
 104D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\dependencies\lz4\lib\liblz4-dll.rc.in133136787273972469 0
 81D:\Навчання\js-constructor-study-youtube\node_modules\term-size\readme.md133136787140367874 0
 74D:\Навчання\js-constructor-study-youtube\node_modules\browserslist133136787152099130 1
-71D:\Навчання\js-constructor-study-youtube\node_modules\callsites133136787098462964 1
-103D:\Навчання\js-constructor-study-youtube\node_modules\node-gyp-build-optional-packages\index.js133136787092911952 0
-92D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\utils\src\sourcemap.js133136787254778374 0
 82D:\Навчання\js-constructor-study-youtube\node_modules\tslib\tslib.es6.html133136787077597411 0
 67D:\Навчання\js-constructor-study-youtube\node_modules\chalk133136787123943985 1
 110D:\Навчання\js-constructor-study-youtube\node_modules\@babel\highlight\node_modules\chalk\templates.js133136787117611118 0
@@ -228,7 +230,6 @@
 73D:\Навчання\js-constructor-study-youtube\node_modules\terser\dist133136787245574252 1
 93D:\Навчання\js-constructor-study-youtube\node_modules\svgo\lib\svgo\css-class-list.js133136787197114315 0
 92D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\asyncify.d.ts133136787107877709 0
-82D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\lib\modules133136787212409451 1
 89D:\Навчання\js-constructor-study-youtube\node_modules\domutils\lib\traversal.d.ts133136787198364272 0
 67D:\Навчання\js-constructor-study-youtube\node_modules\clone133136787113250175 1
 89D:\Навчання\js-constructor-study-youtube\node_modules\svgo\plugins\removeXMLNS.js133136787248677426 0
@@ -325,6 +326,12 @@
 70D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano133136787255715823 1
 81D:\Навчання\js-constructor-study-youtube\node_modules\json5\lib\util.d.ts133136787191003152 0
 79D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\graph\src133136787174939717 1
+93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\IR.js133136787317889406 0
+97D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\touch.js133136787358659980 0
+71D:\Навчання\js-constructor-study-youtube\node_modules\js-tokens133136787098573004 1
+118D:\Навчання\js-constructor-study-youtube\node_modules\@babel\highlight\node_modules\color-convert\CHANGELOG.md133136787082979279 0
+90D:\Навчання\js-constructor-study-youtube\node_modules\csso\lib\clean\WhiteSpace.js133136787235354860 0
+73D:\Навчання\js-constructor-study-youtube\node_modules\htmlparser2133136787161610397 1
 81D:\Навчання\js-constructor-study-youtube\node_modules\css-tree\lib\syntax133136787256340833 1
 88D:\Навчання\js-constructor-study-youtube\node_modules\@trysound\sax\package.json133136787091101805 0
 149D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\test\fixtures\plugins\node_modules\parcel-transformer-bad-engines\index.js133136787257870566 0
@@ -518,7 +525,6 @@
 104D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\src\requests\ConfigRequest.js133136787237591101 0
 74D:\Навчання\js-constructor-study-youtube\node_modules\yaml\LICENSE133136787077441157 0
 78D:\Навчання\js-constructor-study-youtube\node_modules\@swc\helpers\src133136787291245263 1
-84D:\Навчання\js-constructor-study-youtube\node_modules\resolve-from\readme.md133136787092911952 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\GN.js133136787306449784 0
 84D:\Навчання\js-constructor-study-youtube\node_modules\tslib\modules\index.js133136787088601734 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\loaders.js.map133136787199210371 0
@@ -942,12 +948,6 @@
 114D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\optimizer-image\parcel-image.darwin-x64.node133136787221963514 0
 99D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\set-return-type.d.ts133136787214978525 0
 109D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\watcher\src\shared\BruteForceBackend.cc133136787096583020 0
-104D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\lib\modules\removeOptionalTags.js133136787199509187 0
-91D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\dependencies\lz4\lib\dll133136787283496057 1
-104D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\offline-apps.js133136787349466227 0
-97D:\Навчання\js-constructor-study-youtube\node_modules\type-fest\source\tsconfig-json.d.ts133136787218948395 0
-121D:\Навчання\js-constructor-study-youtube\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_drop.c133136787220471720 0
-97D:\Навчання\js-constructor-study-youtube\node_modules\mdn-data\css\properties.schema.json133136787185780025 0
 102D:\Навчання\js-constructor-study-youtube\node_modules\css-tree\lib\syntax\node\TypeSelector.js133136787278717324 0
 85D:\Навчання\js-constructor-study-youtube\node_modules\mdn-data\css\types.json133136787198364272 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\SR.js133136787355669123 0
@@ -1310,6 +1310,7 @@
 105D:\Навчання\js-constructor-study-youtube\node_modules\@jridgewell\set-array\dist\set-array.umd.js133136787083416297 0
 85D:\Навчання\js-constructor-study-youtube\node_modules\mdn-data\css\units.json133136787202621616 0
 83D:\Навчання\js-constructor-study-youtube\node_modules\resolve-from\index.js133136787081853747 0
+84D:\Навчання\js-constructor-study-youtube\node_modules\resolve-from\readme.md133136787092911952 0
 108D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\node-resolver-core\test\fixture\nested133136787258937153 1
 89D:\Навчання\js-constructor-study-youtube\node_modules\lines-and-columns\README.md133136787096426775 0
 98D:\Навчання\js-constructor-study-youtube\node_modules\csso\lib\replace\atrule\keyframes.js133136787220198405 0
@@ -1408,8 +1409,6 @@
 109D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\namevalue-storage.js133136787348290518 0
 83D:\Навчання\js-constructor-study-youtube\node_modules\posthtml\lib\index.js133136787088914298 0
 85D:\Навчання\js-constructor-study-youtube\node_modules\css-select\lib\types.js133136787164270742 0
-93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\DE.js133136787299796239 0
-86D:\Навчання\js-constructor-study-youtube\node_modules\postcss-value-parser\lib133136787137440829 1
 90D:\Навчання\js-constructor-study-youtube\node_modules\postcss-value-parser\LICENSE133136787077656412 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\CM.js133136787268484254 0
 95D:\Навчання\js-constructor-study-youtube\node_modules\postcss-value-parser\package.json133136787124398408 0
@@ -1915,6 +1914,7 @@
 83D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\package.json133136787231459300 0
 92D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\workers\lib\backend.js133136787084197491 0
 80D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\README.md133136787254778374 0
+82D:\Навчання\js-constructor-study-youtube\node_modules\htmlnano\lib\modules133136787212409451 1
 102D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\filesystem.js133136787303764867 0
 108D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\meta-theme-color.js133136787346407485 0
 155D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-package-redirect-up\foo\bar133136787272452791 1
@@ -2121,8 +2121,8 @@
 85D:\Навчання\js-constructor-study-youtube\node_modules\domutils\lib\feeds.d.ts133136787182132653 0
 132D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\test\fixtures\config-extends-not-found\.parcelrc-multiple133136787165052025 0
 87D:\Навчання\js-constructor-study-youtube\node_modules\domutils\lib\helpers.d.ts133136787183602431 0
-113D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\css-placeholder-shown.js133136787295133622 0
 91D:\Навчання\js-constructor-study-youtube\node_modules\domutils\lib\helpers.d.ts.map133136787157608043 0
+113D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\css-placeholder-shown.js133136787295133622 0
 101D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\indexeddb.js133136787315358777 0
 85D:\Навчання\js-constructor-study-youtube\node_modules\domutils\lib\helpers.js133136787088490750 0
 80D:\Навчання\js-constructor-study-youtube\node_modules\acorn\package.json133136787134778861 0
@@ -2529,8 +2529,8 @@
 91D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\loaders.d.ts133136787220198405 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\regions\AD.js133136787125718373 0
 95D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\loaders.d.ts.map133136787198051840 0
-92D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\readFile.d.ts133136787221963514 0
 116D:\Навчання\js-constructor-study-youtube\node_modules\@babel\highlight\node_modules\ansi-styles\package.json133136787078728716 0
+92D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\readFile.d.ts133136787221963514 0
 94D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\readFile.js.map133136787204645346 0
 114D:\Навчання\js-constructor-study-youtube\node_modules\caniuse-lite\data\features\form-submit-attributes.js133136787305171095 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\cosmiconfig\dist\types.d.ts.map133136787206601357 0
@@ -3590,8 +3590,8 @@
 102D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\package.json133136787150080327 0
 93D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\src133136787141618655 1
 106D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\src\constants.js133136787090633066 0
-115D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\src\PostCSSTransformer.js133136787144218655 0
 111D:\Навчання\js-constructor-study-youtube\node_modules\@babel\highlight\node_modules\ansi-styles\license133136787087947533 0
+115D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\src\PostCSSTransformer.js133136787144218655 0
 107D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-postcss\lib\loadConfig.js133136787097051746 0
 99D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-json\package.json133136787097051746 0
 90D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\transformer-json\src133136787089383083 1
@@ -3891,6 +3891,8 @@
 87D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\namer-default\src133136787089539365 1
 109D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\core\test\fixtures\main-format-mismatch133136787294270652 1
 103D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\namer-default\src\DefaultNamer.js133136787090789352 0
+90D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\cache\lib\FSCache.js133136787084041300 0
+103D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\namer-default\lib\DefaultNamer.js133136787084197491 0
 87D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\markdown-ansi\lib133136787082009992 1
 91D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\markdown-ansi\LICENSE133136787077597411 0
 88D:\Навчання\js-constructor-study-youtube\node_modules\@parcel\markdown-ansi\test133136787096426775 1
@@ -4162,9 +4164,9 @@
 77D:\Навчання\js-constructor-study-youtube\node_modules\.bin\semver.ps1133136787366966659 0
 77D:\Навчання\js-constructor-study-youtube\node_modules\.bin\terser.cmd133136787366966659 0
 77D:\Навчання\js-constructor-study-youtube\node_modules\.bin\terser.ps1133136787366966659 0
-72D:\Навчання\js-constructor-study-youtube\dist\image.513edb25.png133140694617506111 0
-72D:\Навчання\js-constructor-study-youtube\dist\index.5525e4b8.css133140694617326066 0
-76D:\Навчання\js-constructor-study-youtube\dist\index.5525e4b8.css.map133140694617886044 0
-71D:\Навчання\js-constructor-study-youtube\dist\index.975ef6c8.js133140694617326066 0
-75D:\Навчання\js-constructor-study-youtube\dist\index.975ef6c8.js.map133140694618036030 0
-64D:\Навчання\js-constructor-study-youtube\dist\index.html133140634265168322 0
+72D:\Навчання\js-constructor-study-youtube\dist\image.513edb25.png133140772044004649 0
+72D:\Навчання\js-constructor-study-youtube\dist\index.5525e4b8.css133140772043864686 0
+76D:\Навчання\js-constructor-study-youtube\dist\index.5525e4b8.css.map133140772045244704 0
+71D:\Навчання\js-constructor-study-youtube\dist\index.975ef6c8.js133140772043874694 0
+75D:\Навчання\js-constructor-study-youtube\dist\index.975ef6c8.js.map133140772045274684 0
+64D:\Навчання\js-constructor-study-youtube\dist\index.html133140709996716423 0
