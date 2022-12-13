@@ -535,10 +535,12 @@ function hmrAcceptRun(bundle, id) {
 var _model = require("./model");
 var _site = require("./classes/site");
 var _mainCss = require("./styles/main.css");
+var _sidebar = require("./classes/sidebar");
 const site = new (0, _site.Site)("#site");
 site.render((0, _model.model));
+const sidebar = new (0, _sidebar.Sidebar)("#panel");
 
-},{"./styles/main.css":"clPKd","./model":"dEDha","./classes/site":"24VTm"}],"clPKd":[function() {},{}],"dEDha":[function(require,module,exports) {
+},{"./styles/main.css":"clPKd","./model":"dEDha","./classes/site":"24VTm","./classes/sidebar":"5YCBk"}],"clPKd":[function() {},{}],"dEDha":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "model", ()=>model);
@@ -687,6 +689,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "row", ()=>row);
 parcelHelpers.export(exports, "col", ()=>col);
 parcelHelpers.export(exports, "css", ()=>css);
+parcelHelpers.export(exports, "block", ()=>block);
 function row(content, styles = "") {
     return `<div class="row" style="${styles}">${content}</div>`;
 }
@@ -696,6 +699,21 @@ function col(content) {
 function css(styles = {}) {
     const toString = (key)=>`${key}: ${styles[key]}`;
     return Object.keys(styles).map(toString).join(";");
+}
+function block(type) {
+    return `
+    <form name="${type}">
+    <h5>${type}</h5>
+    <div class="form-group">
+        <input class="form-control form-control-sm" name="value" placeholder="value"
+    </div>
+    <div class="form-group">
+        <input class="form-control form-control-sm" name="styles" placeholder="styles"
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm">Додати</button>
+    </form>
+    <hr></hr>
+    `;
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -743,6 +761,31 @@ class Site {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5YCBk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Sidebar", ()=>Sidebar);
+var _utils = require("../utils");
+class Sidebar {
+    constructor(selector){
+        this.$el = document.querySelector(selector);
+        this.init();
+    }
+    init() {
+        this.$el.insertAdjacentHTML("afterbegin", this.template);
+        this.$el.eddEventListener("submit", this.add);
+    }
+    get template() {
+        return [
+            (0, _utils.block)("text"),
+            (0, _utils.block)("tittle")
+        ].join("");
+    }
+    add(event) {
+        event.preventDefault();
+    }
+}
+
+},{"../utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
 
 //# sourceMappingURL=index.975ef6c8.js.map
