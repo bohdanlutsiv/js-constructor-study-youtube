@@ -766,6 +766,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Sidebar", ()=>Sidebar);
 var _utils = require("../utils");
+var _blocks = require("./blocks");
 class Sidebar {
     constructor(selector){
         this.$el = document.querySelector(selector);
@@ -773,7 +774,7 @@ class Sidebar {
     }
     init() {
         this.$el.insertAdjacentHTML("afterbegin", this.template);
-        this.$el.eddEventListener("submit", this.add);
+        this.$el.addEventListener("submit", this.add, false);
     }
     get template() {
         return [
@@ -787,10 +788,15 @@ class Sidebar {
         const type = event.target.name;
         const value = event.target.value.value;
         const styles = event.target.styles.value;
-        debugger;
+        const newBlock = type === "text" ? new (0, _blocks.TextBlock)(value, {
+            styles
+        }) : new (0, _blocks.TitleBlock)(value, {
+            styles
+        });
+        console.log(newBlock);
     }
 }
 
-},{"../utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
+},{"../utils":"en4he","./blocks":"gMfMj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequiref8f7")
 
 //# sourceMappingURL=index.975ef6c8.js.map

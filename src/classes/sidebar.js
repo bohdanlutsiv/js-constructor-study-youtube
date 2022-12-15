@@ -1,4 +1,5 @@
 import { block } from "../utils"
+import {TextBlock, TitleBlock} from "./blocks"
 export class Sidebar {
     constructor(selector) {
         this.$el = document.querySelector(selector)
@@ -8,7 +9,7 @@ export class Sidebar {
 
     init() {
         this.$el.insertAdjacentHTML('afterbegin', this.template)
-        this.$el.eddEventListener('submit', this.add)
+        this.$el.addEventListener('submit', this.add, false)
     }
 
     get template() {
@@ -27,6 +28,10 @@ export class Sidebar {
     const value = event.target.value.value
     const styles = event.target.styles.value
 
-    debugger
+    const newBlock = type === 'text' 
+    ? new TextBlock(value, {styles})
+    : new TitleBlock(value, {styles})
+
+    console.log(newBlock)
     }
 }
