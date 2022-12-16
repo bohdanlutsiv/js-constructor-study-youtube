@@ -533,14 +533,11 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"8lqZg":[function(require,module,exports) {
 var _model = require("./model");
-var _site = require("./classes/site");
+var _app = require("./classes/app");
 var _mainCss = require("./styles/main.css");
-var _sidebar = require("./classes/sidebar");
-const site = new (0, _site.Site)("#site");
-site.render((0, _model.model));
-const sidebar = new (0, _sidebar.Sidebar)("#panel");
+new (0, _app.App)((0, _model.model)).init();
 
-},{"./styles/main.css":"clPKd","./model":"dEDha","./classes/site":"24VTm","./classes/sidebar":"5YCBk"}],"clPKd":[function() {},{}],"dEDha":[function(require,module,exports) {
+},{"./styles/main.css":"clPKd","./model":"dEDha","./classes/app":"g9LQJ"}],"clPKd":[function() {},{}],"dEDha":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "model", ()=>model);
@@ -697,6 +694,7 @@ function col(content) {
     return `<div class="col-sm">${content}</div>`;
 }
 function css(styles = {}) {
+    if (typeof styles === "string") return styles;
     const toString = (key)=>`${key}: ${styles[key]}`;
     return Object.keys(styles).map(toString).join(";");
 }
@@ -746,7 +744,28 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"24VTm":[function(require,module,exports) {
+},{}],"g9LQJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "App", ()=>App);
+var _site = require("./site");
+var _sidebar = require("./sidebar");
+class App {
+    constructor(model){
+        this.model = model;
+    }
+    init() {
+        const site = new (0, _site.Site)("#site");
+        site.render(this.model);
+        const updateCallback = (newBlock)=>{
+            this.model.push(newBlock);
+            site.render(this.model);
+        };
+        new (0, _sidebar.Sidebar)("#panel", updateCallback);
+    }
+}
+
+},{"./site":"24VTm","./sidebar":"5YCBk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"24VTm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Site", ()=>Site);
@@ -755,6 +774,7 @@ class Site {
         this.$el = document.querySelector(selector);
     }
     render(model) {
+        this.$el.innerHTML = "";
         model.forEach((block)=>{
             this.$el.insertAdjacentHTML("beforeend", block.toHTML());
         });
@@ -768,13 +788,14 @@ parcelHelpers.export(exports, "Sidebar", ()=>Sidebar);
 var _utils = require("../utils");
 var _blocks = require("./blocks");
 class Sidebar {
-    constructor(selector){
+    constructor(selector, updateCallback){
         this.$el = document.querySelector(selector);
+        this.update = updateCallback;
         this.init();
     }
     init() {
         this.$el.insertAdjacentHTML("afterbegin", this.template);
-        this.$el.addEventListener("submit", this.add, false);
+        this.$el.addEventListener("submit", this.add.bind(this));
     }
     get template() {
         return [
@@ -784,7 +805,6 @@ class Sidebar {
     }
     add(event) {
         event.preventDefault();
-        console.log(event.target);
         const type = event.target.name;
         const value = event.target.value.value;
         const styles = event.target.styles.value;
@@ -793,7 +813,9 @@ class Sidebar {
         }) : new (0, _blocks.TitleBlock)(value, {
             styles
         });
-        console.log(newBlock);
+        this.update(newBlock);
+        event.target.value.value = "";
+        event.target.styles.value = "";
     }
 }
 
