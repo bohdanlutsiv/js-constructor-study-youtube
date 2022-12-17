@@ -23,5 +23,8 @@
   "homepage": "https://github.com/bohdanlutsiv/js-constructor-study-youtube#readme",
   "devDependencies": {
     "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.4"
   }
 }
